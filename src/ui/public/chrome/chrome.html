@@ -1,10 +1,13 @@
 <kbn-notifications list="notifList"></kbn-notifications>
-<div class="content" chrome-context >
+
+<div ng-init="useDaping=true" ng-class="{'da-ping content': useDaping, 'content': !useDaping}" chrome-context>
+    <div class="nav-close remove" ng-click="useDaping=!useDaping">
+      <i class="fa fa-chevron-up" ng-class="{'fa fa-chevron-up': useDaping, 'fa fa-chevron-down': !useDaping}"></i>
+    </div>
   <nav
     ng-style="::{ background: chrome.getNavBackground() }"
     ng-class="{ show: chrome.getVisible() }"
     class="hide navbar navbar-inverse navbar-static-top">
-
     <!-- Mobile navbar -->
     <div class="navbar-header">
       <button ng-click="showCollapsed = !showCollapsed" type="button" class="navbar-toggle">
@@ -55,7 +58,6 @@
     </div>
     <!-- /Full navbar -->
   </nav>
-
   <!-- TODO: These config dropdowns shouldn't be hard coded -->
   <config
     config-template="appSwitcherTemplate"
