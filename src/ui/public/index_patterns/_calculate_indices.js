@@ -11,7 +11,7 @@ define(function (require) {
   function msConstraint(comparison, value) {
     return {
       [comparison]: timeValue(value),
-      format: 'epoch_millis'
+    //   format: 'epoch_millis'
     };
   }
 

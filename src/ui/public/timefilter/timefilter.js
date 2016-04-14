@@ -86,7 +86,7 @@ define(function (require) {
         filter.range[timefield.name] = {
           gte: bounds.min.valueOf(),
           lte: bounds.max.valueOf(),
-          format: 'epoch_millis'
+        //   format: 'epoch_millis'
         };
       }
 

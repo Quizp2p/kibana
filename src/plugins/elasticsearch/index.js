@@ -28,8 +28,10 @@ module.exports = function ({ Plugin }) {
           cert: string(),
           key: string()
         }).default(),
-        apiVersion: string().default('2.0'),
-        engineVersion: string().valid('^2.3.0').default('^2.3.0')
+        // apiVersion: string().default('2.0'),
+        apiVersion: string().default('1.7'),
+        // engineVersion: string().valid('^2.3.0').default('^2.3.0')
+        engineVersion: string().valid('^1.7.0').default('^1.7.0')
       }).default();
     },
 
