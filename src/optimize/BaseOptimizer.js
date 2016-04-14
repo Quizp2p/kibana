@@ -69,6 +69,7 @@ class BaseOptimizer {
       entry: this.bundles.toWebpackEntries(),
 
       devtool: this.sourceMaps,
+    //   devtool: 'source-map',
       profile: this.profile || false,
 
       output: {
@@ -101,7 +102,7 @@ class BaseOptimizer {
             test: /\.less$/,
             loader: ExtractTextPlugin.extract(
               'style',
-              `css${mapQ}!autoprefixer${mapQ ? mapQ + '&' : '?'}{ "browsers": ["last 2 versions","> 5%"] }!less${mapQ}`
+              `css${mapQ}!less${mapQ}`
             )
           },
           { test: /\.css$/, loader: ExtractTextPlugin.extract('style', `css${mapQ}`) },
