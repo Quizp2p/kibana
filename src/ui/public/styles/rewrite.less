@@ -1,41 +1,59 @@
 @import "~ui/styles/dark-variables.less";
-.navbar {
-  display: none !important;
+
+.nav-close {
+    width: 100%;
+    background-color: #ecf0f1;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+    text-align: center;
+    background-color: @dashboard-bg;
 }
 
-.dashboard-container navbar {
-  display: none !important;
-}
+.da-ping {
+  .nav-close{
 
-dashboard-panel{
-  background: @dashboard-bg !important;
-}
+  }
+  .navbar {
+    display: none !important;
+  }
 
-.panel-heading {
-  display: none !important;
-}
+  .dashboard-container {
+    navbar {
+      display: none !important;
+    }
+  }
 
-.panel, .panel-heading {
-  border:0;
-  background: @dashboard-bg !important;
-}
+  dashboard-panel {
+    background: @dashboard-bg !important;
+  }
 
-.btn-group {
-  visibility: hidden;
-}
+  .panel-heading {
+    display: none !important;
+  }
 
-visualize {
-  border: 0;
-}
+  .panel, .panel-heading {
+    border: 0;
+    background: @dashboard-bg !important;
+  }
 
-visualize-spy {
-  visibility: hidden;
-}
+  .btn-group {
+    visibility: hidden;
+  }
 
-.legend-toggle {
-  visibility: hidden;
-}
+  visualize {
+    border: 0;
+  }
 
-.legend-ul {
-  border:0 !important;
+  visualize-spy {
+    visibility: hidden;
+  }
+
+  .legend-toggle {
+    visibility: hidden;
+  }
+
+  .legend-ul {
+    border: 0 !important;
+  }
 }
