@@ -2,7 +2,7 @@
 
 <div ng-init="useDaping=true" ng-class="{'da-ping content': useDaping, 'content': !useDaping}" chrome-context>
     <div class="nav-close remove" ng-click="useDaping=!useDaping">
-      <i class="fa fa-chevron-up" ng-class="{'fa fa-chevron-up': useDaping, 'fa fa-chevron-down': !useDaping}"></i>
+      <i class="fa fa-chevron-up" ng-class="{'fa fa-chevron-down': useDaping, 'fa fa-chevron-up': !useDaping}"></i>
     </div>
   <nav
     ng-style="::{ background: chrome.getNavBackground() }"
